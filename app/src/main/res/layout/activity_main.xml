@@ -3,6 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
+    <Button
+        android:id="@+id/btn_get_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/normal_10dp"
+        android:text="点击获取网络数据"/>
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/normal_20dp"/>
+
+
+    <Button
+        android:id="@+id/btn_to_customview_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/normal_10dp"
+        android:text="跳转到自定义view界面"/>
+    
+    
 </LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <com.example.administrator.mycommonlibrarydemo.widget.DifferentTextView
+        android:id="@+id/item_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:leftContent_size_different_view="@dimen/normal_20sp"
+        app:leftContent_color_different_view="@color/colorPrimary"
+        app:leftContent_marginRight_different_view="@dimen/normal_30dp"
+        app:middleContent_color_different_view="@color/colorAccent"
+        app:middleContent_size_different_view="@dimen/normal_30sp"
+        app:rightContent_show_bold_different_view="true"/>
+
+    <com.example.administrator.mycommonlibrarydemo.widget.DifferentTextView
+        android:id="@+id/item_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:leftContent_size_different_view="@dimen/normal_20sp"
+        app:leftContent_color_different_view="@color/colorPrimary"
+        app:leftContent_marginRight_different_view="@dimen/normal_30dp"
+        app:leftContent_show_bold_different_view="true"
+        app:middleContent_color_different_view="@color/colorAccent"
+        app:middleContent_size_different_view="@dimen/normal_30sp"
+        app:rightContent_show_bold_different_view="true"
+        app:rightContent_marginLeft_different_view="@dimen/normal_50dp"
+        app:rightContent_size_different_view="@dimen/normal_36sp"/>
+
+</LinearLayout>
