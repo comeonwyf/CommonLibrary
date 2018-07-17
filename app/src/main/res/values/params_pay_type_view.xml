@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="PayTypeView">
+
+        <attr name="label_paytype_view" format="reference" />
+        <attr name="label_size_paytype_view" format="dimension" />
+        <attr name="content_paytype_view" format="string" />
+        <attr name="content_color_paytype_view" format="reference" />
+        <attr name="content_size_paytype_view" format="dimension" />
+        <attr name="select_img_paytype_view" format="reference" />
+        <attr name="unselect_img_paytype_view" format="reference" />
+        
+    </declare-styleable>
+    
+    <color name="paytype_view_content_color">#333333</color>
+    
+</resources>

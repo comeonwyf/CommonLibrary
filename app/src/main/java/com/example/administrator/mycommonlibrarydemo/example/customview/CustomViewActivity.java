@@ -2,8 +2,10 @@ package com.example.administrator.mycommonlibrarydemo.example.customview;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import com.example.administrator.mycommonlibrarydemo.R;
 import com.example.administrator.mycommonlibrarydemo.widget.DifferentTextView;
+import com.example.administrator.mycommonlibrarydemo.widget.PayTypeView;
 
 public class CustomViewActivity extends AppCompatActivity {
     
@@ -14,7 +16,10 @@ public class CustomViewActivity extends AppCompatActivity {
       
         setDifferentTextView();
         
+        setPayTypeView();
+        
     }
+
 
     //设置DifferentTextView
     private void setDifferentTextView() {
@@ -24,8 +29,23 @@ public class CustomViewActivity extends AppCompatActivity {
         mItemOne.setLeftContent("我是左边的内容内容内容内容");
         mItemOne.setMiddleContent("/娃娃");
 
-        mItemTwo.setLeftContent("我是左边的内容内容内容内容我是左边的内容内容内容内容我是左边的内容内容内容内容我是左边的内容内容内容内容");
-        mItemTwo.setMiddleContent("/娃娃");
-        mItemTwo.setRightContent("--右边");
+        mItemTwo.setLeftContent("我是左边");
+        mItemTwo.setMiddleContent("/娃娃我是左边");
+        mItemTwo.setRightContent(R.string.app_name);
+    }
+
+
+    private void setPayTypeView() {
+       final PayTypeView itemPay =  findViewById(R.id.item_pay);
+       itemPay.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               if(itemPay.getSelectStatus()){
+                   itemPay.setSelectType(false);
+               }else {
+                   itemPay.setSelectType(true);
+               }
+           }
+       });
     }
 }

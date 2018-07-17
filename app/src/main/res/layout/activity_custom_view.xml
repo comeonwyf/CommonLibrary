@@ -10,6 +10,8 @@
         android:id="@+id/item_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/normal_20dp"
+        android:padding="@dimen/normal_20dp"
         app:leftContent_size_different_view="@dimen/normal_20sp"
         app:leftContent_color_different_view="@color/colorPrimary"
         app:leftContent_marginRight_different_view="@dimen/normal_30dp"
@@ -21,6 +23,7 @@
         android:id="@+id/item_two"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_40dp"
         app:leftContent_size_different_view="@dimen/normal_20sp"
         app:leftContent_color_different_view="@color/colorPrimary"
         app:leftContent_marginRight_different_view="@dimen/normal_30dp"
@@ -30,5 +33,18 @@
         app:rightContent_show_bold_different_view="true"
         app:rightContent_marginLeft_different_view="@dimen/normal_50dp"
         app:rightContent_size_different_view="@dimen/normal_36sp"/>
-
+    
+    <com.example.administrator.mycommonlibrarydemo.widget.PayTypeView
+        android:id="@+id/item_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/normal_20dp"
+        android:background="@color/colorAccent"
+        app:label_paytype_view="@mipmap/ic_pay"
+        app:content_paytype_view="支付宝支付"
+        app:content_color_paytype_view="@color/colorPrimary"
+        app:content_size_paytype_view="@dimen/normal_36sp"
+        app:select_img_paytype_view="@mipmap/ic_yuan"
+        app:unselect_img_paytype_view="@mipmap/ic_yuanhuise"/>
+        
 </LinearLayout>
