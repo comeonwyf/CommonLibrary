@@ -32,6 +32,7 @@ public class CustomViewActivity extends AppCompatActivity {
         mItemTwo.setLeftContent("我是左边");
         mItemTwo.setMiddleContent("/娃娃我是左边");
         mItemTwo.setRightContent(R.string.app_name);
+        
     }
 
 

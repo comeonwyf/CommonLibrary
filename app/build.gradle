@@ -4,7 +4,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.administrator.mycommonlibrarydemo"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -40,4 +40,27 @@ dependencies {
     //    implementation 'com.github.licheedev.CommonSize:common_size_w1080_n1920:1.3'
     //    implementation 'com.github.licheedev.CommonSize:common_size_w750_n1334:1.3'
     compile 'com.github.licheedev.CommonSize:common_size_w750_n1000:1.3'
+
+
+    //下拉刷新
+    implementation 'com.lcodecorex:tkrefreshlayout:1.0.7'
+    //滑动选择器
+    implementation 'cn.aigestudio.wheelpicker:WheelPicker:1.1.2'
+
+    //高仿微信底部导航栏
+    implementation 'com.yinglan.alphatabs:library:1.0.8'
+    //viewpager指示器
+    compile 'com.github.hackware1993:MagicIndicator:1.5.0'
+
+    //时间选择器
+    compile 'com.contrarywind:Android-PickerView:4.1.3'
+
+    //侧边索引
+    compile 'com.gjiazhe:wavesidebar:1.3'
+    
+    //流布局
+    implementation 'com.xiaofeng.android:flowlayoutmanager:1.2.3.2'
+
+    //顶部导航
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
 }
