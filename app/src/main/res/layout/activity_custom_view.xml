@@ -46,5 +46,12 @@
         app:content_size_paytype_view="@dimen/normal_36sp"
         app:select_img_paytype_view="@mipmap/ic_yuan"
         app:unselect_img_paytype_view="@mipmap/ic_yuanhuise"/>
+    
+    <Button
+        android:id="@+id/btn_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="弹出Dialog"/>
         
+    
 </LinearLayout>

@@ -1,25 +1,40 @@
 package com.example.administrator.mycommonlibrarydemo.example.customview;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import com.example.administrator.mycommonlibrarydemo.R;
+import com.example.administrator.mycommonlibrarydemo.widget.CustomDialog;
 import com.example.administrator.mycommonlibrarydemo.widget.DifferentTextView;
 import com.example.administrator.mycommonlibrarydemo.widget.PayTypeView;
 
 public class CustomViewActivity extends AppCompatActivity {
-    
+
+    private Context mContext;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_view);
+        mContext = this;
       
         setDifferentTextView();
         
         setPayTypeView();
         
+        setDialog();
     }
 
+    private void setDialog() {
+        findViewById(R.id.btn_dialog).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CustomDialog dialog = new CustomDialog(mContext);
+                dialog.show();
+            }
+        });
+    }
 
     //设置DifferentTextView
     private void setDifferentTextView() {

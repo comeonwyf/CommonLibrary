@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+    
+    <TextView
+        android:id="@+id/tv_women"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/normal_88dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/normal_26dp"
+        android:textColor="@color/color_333"
+        android:textSize="@dimen/normal_28dp"
+        android:background="@drawable/selector_item_click"
+        android:text="只看女生"/>
+
+    <TextView
+        android:id="@+id/tv_men"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/normal_88dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/normal_26dp"
+        android:textColor="@color/color_333"
+        android:textSize="@dimen/normal_28dp"
+        android:background="@drawable/selector_item_click"
+        android:text="只看男生"/>
+
+    <TextView
+        android:id="@+id/tv_allpeople"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/normal_88dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/normal_26dp"
+        android:textColor="@color/color_333"
+        android:textSize="@dimen/normal_28dp"
+        android:background="@drawable/selector_item_click"
+        android:text="全部人"/>
+
+    <TextView
+        android:id="@+id/tv_clear_position_quit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/normal_88dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/normal_26dp"
+        android:textColor="@color/color_333"
+        android:textSize="@dimen/normal_28dp"
+        android:background="@drawable/selector_item_click"
+        android:text="取消"/>
+    
+</LinearLayout>
