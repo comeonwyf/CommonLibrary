@@ -12,6 +12,7 @@ import com.example.administrator.mycommonlibrarydemo.example.customview.CustomVi
 import com.example.administrator.mycommonlibrarydemo.example.http_get_data.MainBean;
 import com.example.administrator.mycommonlibrarydemo.example.http_get_data.MainHttp;
 import com.example.administrator.mycommonlibrarydemo.example.http_get_data.TipsCallback;
+import com.example.administrator.mycommonlibrarydemo.util.CountDownTimerUtils;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +29,15 @@ public class MainActivity extends AppCompatActivity {
         mToCustomView = findViewById(R.id.btn_to_customview_activity);
         
         setListener();
+        
+        CountDownTimerUtils countDownTimerUtils = null;
+        countDownTimerUtils = CountDownTimerUtils.getCountDownTimer();
+        Log.e("print", "onCreate: "+countDownTimerUtils );
+        countDownTimerUtils.start();
+        countDownTimerUtils.cancel();
+        countDownTimerUtils = CountDownTimerUtils.getCountDownTimer();
+        Log.e("print", "onCreate: "+ countDownTimerUtils);
+        countDownTimerUtils.start();
         
     }
 

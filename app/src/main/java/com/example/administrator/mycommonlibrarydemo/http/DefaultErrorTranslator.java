@@ -3,6 +3,7 @@ package com.example.administrator.mycommonlibrarydemo.http;
 import com.example.administrator.mycommonlibrarydemo.http.interf.ErrorTranslator;
 import com.google.gson.JsonParseException;
 import com.lzy.okgo.exception.HttpException;
+import java.net.UnknownHostException;
 
 /**
  * Created by wuyufeng    on  2018/7/9 0009.
@@ -17,7 +18,9 @@ public class DefaultErrorTranslator implements ErrorTranslator {
         } else if (throwable instanceof JsonParseException) {
             // json解析错误，一般就是接口改了
             return "网络接口异常(maybe json解析有误)";
-        } else if (throwable instanceof ApiException) {
+        } else if (throwable instanceof UnknownHostException) {
+            return "检查网络是否打开";
+        }else if (throwable instanceof ApiException) {
             return throwable.getMessage();
         } else {
             return throwable.getMessage();

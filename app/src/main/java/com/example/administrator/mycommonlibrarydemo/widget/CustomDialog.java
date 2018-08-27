@@ -30,7 +30,6 @@ public class CustomDialog extends Dialog {
         getWindow().setWindowAnimations(R.style.dialogfrombottom);
         
         
-        
     }
     
     

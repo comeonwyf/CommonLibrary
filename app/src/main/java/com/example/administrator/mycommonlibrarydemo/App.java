@@ -6,6 +6,7 @@ import com.example.administrator.mycommonlibrarydemo.http.DefaultErrorTranslator
 import com.example.administrator.mycommonlibrarydemo.http.JsonRequestLogger;
 import com.example.administrator.mycommonlibrarydemo.http.OkGoWrapper;
 import com.example.administrator.mycommonlibrarydemo.http.interf.ErrorInterceptor;
+import com.squareup.leakcanary.LeakCanary;
 
 /**
  * Created by wuyufeng    on  2018/7/9 0009.
@@ -19,6 +20,8 @@ public class App extends Application{
         super.onCreate();
         sInstance = this;
         initOkGo();
+
+        LeakCanary.install(this);
     }
 
     private void initOkGo() {
