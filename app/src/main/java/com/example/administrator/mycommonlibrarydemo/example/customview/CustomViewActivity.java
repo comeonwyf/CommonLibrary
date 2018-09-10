@@ -2,10 +2,13 @@ package com.example.administrator.mycommonlibrarydemo.example.customview;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import com.example.administrator.mycommonlibrarydemo.R;
+import com.example.administrator.mycommonlibrarydemo.widget.ColorSeekBar;
 import com.example.administrator.mycommonlibrarydemo.widget.CustomDialog;
 import com.example.administrator.mycommonlibrarydemo.widget.DifferentTextView;
 import com.example.administrator.mycommonlibrarydemo.widget.PayTypeView;
@@ -27,6 +30,26 @@ public class CustomViewActivity extends AppCompatActivity {
         setDialog();
         
         setRecyclerView();
+        
+        setColorSeekBar();
+    }
+
+    private void setColorSeekBar() {
+        ColorSeekBar colorSeekBar = findViewById(R.id.colorSeekBar);
+        colorSeekBar.setColorByGadient(3, true,0,new int[]{Color.WHITE,Color.RED},new int[]{Color.WHITE,Color.BLUE},new int[]{Color.RED,Color.BLACK});
+        colorSeekBar.setOnStateChangeListener(new ColorSeekBar.OnStateChangeListener() {
+            @Override
+            public void OnStateChangeListener(float progress) {
+                Log.e("print", "OnStateChangeListener: "+progress );
+            }
+
+            @Override
+            public void onStopTrackingTouch(float progress) {
+                Log.e("print", "onStopTrackingTouch: "+progress );
+            }
+        });
+        ColorSeekBar colorSeekBar1 = findViewById(R.id.colorSeekBar1);
+        colorSeekBar1.setColor(4,true,100/4*3, Color.RED,Color.BLACK,Color.BLUE,Color.YELLOW);
     }
 
     private void setRecyclerView() {
