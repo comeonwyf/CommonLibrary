@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     
-    <com.example.administrator.mycommonlibrarydemo.widget.DifferentTextView
+    
+    <com.example.widgetlibrary.DifferentTextView
         android:id="@+id/item_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,7 +20,7 @@
         app:middleContent_size_different_view="@dimen/normal_30sp"
         app:rightContent_show_bold_different_view="true"/>
 
-    <com.example.administrator.mycommonlibrarydemo.widget.DifferentTextView
+    <com.example.widgetlibrary.DifferentTextView
         android:id="@+id/item_two"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,7 +35,7 @@
         app:rightContent_marginLeft_different_view="@dimen/normal_50dp"
         app:rightContent_size_different_view="@dimen/normal_36sp"/>
     
-    <com.example.administrator.mycommonlibrarydemo.widget.PayTypeView
+    <com.example.widgetlibrary.PayTypeView
         android:id="@+id/item_pay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -59,13 +60,13 @@
         android:layout_height="wrap_content"
         android:text="to recyclerview"/>
     
-    <com.example.administrator.mycommonlibrarydemo.widget.ColorSeekBar
+    <com.example.widgetlibrary.ColorSeekBar
         android:id="@+id/colorSeekBar"
         android:layout_margin="@dimen/normal_20dp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/normal_10dp" />
 
-    <com.example.administrator.mycommonlibrarydemo.widget.ColorSeekBar
+    <com.example.colorseekbarlibrary.ColorSeekBar
         android:id="@+id/colorSeekBar1"
         android:layout_margin="@dimen/normal_20dp"
         android:layout_width="match_parent"

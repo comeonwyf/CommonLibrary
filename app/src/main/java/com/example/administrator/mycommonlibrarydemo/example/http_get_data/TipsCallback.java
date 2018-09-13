@@ -1,8 +1,8 @@
 package com.example.administrator.mycommonlibrarydemo.example.http_get_data;
 
-import com.example.administrator.mycommonlibrarydemo.http.ApiException;
-import com.example.administrator.mycommonlibrarydemo.http.callback.MyCallback;
-import com.example.administrator.mycommonlibrarydemo.http.util.Convert2;
+import com.example.httplibrary.http.ApiException;
+import com.example.httplibrary.http.callback.MyCallback;
+import com.example.httplibrary.http.util.Convert2;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
@@ -41,4 +41,8 @@ public abstract class TipsCallback<T> extends MyCallback<T> {
         }
         
     }
+
+    public abstract void onSuccess(MainBean mainBean);
+
+ 
 }

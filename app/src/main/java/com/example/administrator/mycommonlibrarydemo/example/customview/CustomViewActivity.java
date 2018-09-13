@@ -32,6 +32,7 @@ public class CustomViewActivity extends AppCompatActivity {
         setRecyclerView();
         
         setColorSeekBar();
+        
     }
 
     private void setColorSeekBar() {

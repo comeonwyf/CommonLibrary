@@ -1,6 +1,6 @@
 package com.example.administrator.mycommonlibrarydemo.example.http_get_data;
 
-import com.example.administrator.mycommonlibrarydemo.http.OkGoWrapper;
+import com.example.httplibrary.http.OkGoWrapper;
 import com.lzy.okgo.model.HttpParams;
 
 /**

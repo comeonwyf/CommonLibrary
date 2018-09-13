@@ -1,8 +1,8 @@
 package com.example.administrator.mycommonlibrarydemo.example;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onFailure(String message, Throwable tr) {
-                        Log.e("print", "onFailure: "+message );
+                        Log.e("print", "onFailure ");
                         mTvTip.setText("加载失败");
                     }
                 });

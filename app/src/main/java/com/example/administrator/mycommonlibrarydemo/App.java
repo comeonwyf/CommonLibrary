@@ -1,11 +1,11 @@
 package com.example.administrator.mycommonlibrarydemo;
 
 import android.app.Application;
-import com.example.administrator.mycommonlibrarydemo.http.ApiException;
-import com.example.administrator.mycommonlibrarydemo.http.DefaultErrorTranslator;
-import com.example.administrator.mycommonlibrarydemo.http.JsonRequestLogger;
-import com.example.administrator.mycommonlibrarydemo.http.OkGoWrapper;
-import com.example.administrator.mycommonlibrarydemo.http.interf.ErrorInterceptor;
+import com.example.httplibrary.http.ApiException;
+import com.example.httplibrary.http.DefaultErrorTranslator;
+import com.example.httplibrary.http.JsonRequestLogger;
+import com.example.httplibrary.http.OkGoWrapper;
+import com.example.httplibrary.http.interf.ErrorInterceptor;
 import com.squareup.leakcanary.LeakCanary;
 
 /**
