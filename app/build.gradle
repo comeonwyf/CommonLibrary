@@ -56,9 +56,7 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:27.0.0'
     //卡片
     implementation 'com.android.support:cardview-v7:27.0.2'
-    //多颜色SeekBar
-    implementation 'com.github.comeonwyf:ColorSeekBar:v1.0.3'
-    compile project(path: ':httplibrary')
+    
     implementation project(':widgetlibrary')
     implementation project(':serialportlibrary')
     implementation project(':httplibrary')

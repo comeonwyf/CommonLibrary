@@ -8,10 +8,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import com.example.administrator.mycommonlibrarydemo.R;
-import com.example.administrator.mycommonlibrarydemo.widget.ColorSeekBar;
 import com.example.administrator.mycommonlibrarydemo.widget.CustomDialog;
-import com.example.administrator.mycommonlibrarydemo.widget.DifferentTextView;
-import com.example.administrator.mycommonlibrarydemo.widget.PayTypeView;
+import com.example.widgetlibrary.ColorSeekBar;
+import com.example.widgetlibrary.DifferentTextView;
+import com.example.widgetlibrary.PayTypeView;
 
 public class CustomViewActivity extends AppCompatActivity {
 
@@ -75,7 +75,7 @@ public class CustomViewActivity extends AppCompatActivity {
 
     //设置DifferentTextView
     private void setDifferentTextView() {
-        DifferentTextView  mItemOne = findViewById(R.id.item_one);
+        DifferentTextView mItemOne = findViewById(R.id.item_one);
         DifferentTextView mItemTwo = findViewById(R.id.item_two);
         
         mItemOne.setLeftContent("我是左边的内容内容内容内容");

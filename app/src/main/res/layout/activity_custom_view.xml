@@ -66,7 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/normal_10dp" />
 
-    <com.example.colorseekbarlibrary.ColorSeekBar
+    <com.example.widgetlibrary.ColorSeekBar
         android:id="@+id/colorSeekBar1"
         android:layout_margin="@dimen/normal_20dp"
         android:layout_width="match_parent"
