@@ -56,8 +56,8 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:27.0.0'
     //卡片
     implementation 'com.android.support:cardview-v7:27.0.2'
-    
     implementation project(':widgetlibrary')
     implementation project(':serialportlibrary')
     implementation project(':httplibrary')
+    implementation project(':recyclerviewlibrary')
 }

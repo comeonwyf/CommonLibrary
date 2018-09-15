@@ -1,4 +1,4 @@
-package com.example.administrator.mycommonlibrarydemo.util;
+package com.example.recyclerviewlibrary;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

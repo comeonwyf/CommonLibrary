@@ -1,4 +1,4 @@
-package com.example.administrator.mycommonlibrarydemo.base_adapter_recyclerview;
+package com.example.recyclerviewlibrary;
 
 import android.content.Context;
 import android.content.res.Resources;

@@ -2,7 +2,7 @@ package com.example.administrator.mycommonlibrarydemo.example.adapter;
 
 import android.widget.TextView;
 import com.example.administrator.mycommonlibrarydemo.R;
-import com.example.administrator.mycommonlibrarydemo.base_adapter_recyclerview.BaseRecyclerAdapter;
+import com.example.recyclerviewlibrary.BaseRecyclerAdapter;
 import com.example.administrator.mycommonlibrarydemo.example.bean.Student;
 
 /**

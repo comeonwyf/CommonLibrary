@@ -1,4 +1,4 @@
-package com.example.administrator.mycommonlibrarydemo.util;
+package com.example.recyclerviewlibrary;
 
 import android.app.Activity;
 import android.content.res.Resources;
@@ -11,8 +11,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import com.example.administrator.mycommonlibrarydemo.R;
-import com.example.administrator.mycommonlibrarydemo.otherview.SpacesItemDecoration;
+
 
 /**
  * Created by steve    on  2018/8/27 0027.

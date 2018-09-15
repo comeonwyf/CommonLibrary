@@ -1,4 +1,4 @@
-package com.example.administrator.mycommonlibrarydemo.otherview;
+package com.example.recyclerviewlibrary;
 
 /**
  * Created by wuyufeng    on  2018/8/27 0027.

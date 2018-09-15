@@ -1,6 +1,7 @@
 package com.example.administrator.mycommonlibrarydemo;
 
 import android.app.Application;
+import android.content.Context;
 import com.example.httplibrary.http.ApiException;
 import com.example.httplibrary.http.DefaultErrorTranslator;
 import com.example.httplibrary.http.JsonRequestLogger;
@@ -15,10 +16,14 @@ import com.squareup.leakcanary.LeakCanary;
 
 public class App extends Application{
     private static App sInstance;
+    public Context mContext;
+    
+
     @Override
     public void onCreate() {
         super.onCreate();
         sInstance = this;
+        mContext = this;
         initOkGo();
 
         LeakCanary.install(this);
@@ -45,5 +50,9 @@ public class App extends Application{
             })
             // 打印网络访问日志的
             .setRequestLogger(new JsonRequestLogger(true,30));
+    }
+
+    public static App getInstance() {
+        return sInstance;
     }
 }
