@@ -17,6 +17,6 @@ Step 2. Add the dependency
 
 dependencies {
 
-     implementation 'com.github.comeonwyf:CommonLibrary:v1.0.0'
+     implementation 'com.github.comeonwyf:CommonLibrary:v1.0.1'
 		
 }
