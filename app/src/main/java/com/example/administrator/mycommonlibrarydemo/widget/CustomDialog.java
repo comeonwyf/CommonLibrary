@@ -1,36 +1,49 @@
 package com.example.administrator.mycommonlibrarydemo.widget;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.view.Gravity;
+import android.view.View;
 import com.example.administrator.mycommonlibrarydemo.R;
-import com.example.widgetlibrary.dialog.DialogUtil;
+import com.example.administrator.mycommonlibrarydemo.util.ToastUtil;
+import com.example.widgetlibrary.dialog.ICustomDialog;
 
 /**
  * Created by wuyufeng    on  2018/7/26 0026.
- * interface by
+ * 继承ICustomDialog
  */
 
-public class CustomDialog extends Dialog {
-    
+public class CustomDialog extends ICustomDialog {
+
+    private final Context mContext;
+
     public CustomDialog(@NonNull Context context) {
-        this(context,0);
+        super(context);
+        mContext = context;
     }
 
-    public CustomDialog(@NonNull Context context, int themeResId) {
-        super(context, R.style.CommonDialogStyle);
-        
-        DialogUtil.adjustDialogLayout(this, true, false);
-        DialogUtil.setGravity(this, Gravity.BOTTOM);
-
-        setContentView(R.layout.dialog_custom);
-        
-        //是否从底部动画弹出
-        //getWindow().setWindowAnimations(R.style.dialogfrombottom);
-        
-        
+    @Override
+    public int getLayoutId() {
+        return R.layout.dialog_custom;
     }
-    
-    
+
+    @Override
+    public int getGravityStatus() {
+        return Gravity.BOTTOM;
+    }
+
+    @Override
+    public boolean isMatchParent() {
+        return true;
+    }
+
+    @Override
+    public void initView() {
+        findViewById(R.id.tv_women).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ToastUtil.showToastShort(mContext,"我是女生");
+            }
+        });
+    }
 }

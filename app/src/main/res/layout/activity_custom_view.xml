@@ -74,6 +74,21 @@
                 android:layout_height="wrap_content"
                 android:text="to Map"/>
             
+           <com.example.widgetlibrary.MoneyEditText
+               android:id="@+id/moneyEditText"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/normal_130dp"
+               android:gravity="center_vertical"
+               android:layout_margin="@dimen/normal_20dp"/>
+            
+            <com.example.widgetlibrary.ShoppingSelectNumView
+                android:id="@+id/shoppingSelectNumView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:select_num_subtract_img="@mipmap/ic_subtraction"
+                app:select_num_add_img="@mipmap/ic_add"
+                app:select_num_content_size="@dimen/normal_40sp"
+                app:select_num_content_color="@color/color_333"/>
             
             
         </LinearLayout>

@@ -9,10 +9,13 @@ import android.util.Log;
 import android.view.View;
 import com.example.administrator.mycommonlibrarydemo.R;
 import com.example.administrator.mycommonlibrarydemo.util.ThreeMapsUtil;
+import com.example.administrator.mycommonlibrarydemo.util.ToastUtil;
 import com.example.administrator.mycommonlibrarydemo.widget.CustomDialog;
 import com.example.widgetlibrary.ColorSeekBar;
 import com.example.widgetlibrary.DifferentTextView;
+import com.example.widgetlibrary.MoneyEditText;
 import com.example.widgetlibrary.PayTypeView;
+import com.example.widgetlibrary.ShoppingSelectNumView;
 
 public class CustomViewActivity extends AppCompatActivity {
 
@@ -37,8 +40,25 @@ public class CustomViewActivity extends AppCompatActivity {
         
         setMap();
         
-        
-        
+        setMoneyEditText();
+
+        setShoppingSelectNumView();
+    }
+
+    private void setShoppingSelectNumView() {
+        ShoppingSelectNumView shoppingSelectNumView = findViewById(R.id.shoppingSelectNumView);
+        shoppingSelectNumView.setShoppingCount(10);
+        shoppingSelectNumView.setSelectCountListener(new ShoppingSelectNumView.SelectCountListener() {
+            @Override
+            public void getCount(String count) {
+                ToastUtil.showToastShort(getApplicationContext(),count);
+            }
+        });
+    }
+
+    private void setMoneyEditText() {
+       MoneyEditText moneyEditText = findViewById(R.id.moneyEditText);
+        Log.e("print", "得到金额: "+moneyEditText.getMoneyText() );
     }
 
     private void setMap() {
@@ -82,8 +102,31 @@ public class CustomViewActivity extends AppCompatActivity {
         findViewById(R.id.btn_dialog).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CustomDialog dialog = new CustomDialog(mContext);
-                dialog.show();
+                
+                //用法1
+                //ICustomDialog iCustomDialog = new ICustomDialog(mContext) {
+                //    @Override
+                //    public int getLayoutId() {
+                //        return R.layout.dialog_custom;
+                //    }
+                //
+                //    @Override
+                //    public int getGravityStatus() {
+                //        return Gravity.BOTTOM;
+                //    }
+                //
+                //    @Override
+                //    public boolean isMatchParent() {
+                //        return true;
+                //    }
+                //};
+                //iCustomDialog.showDialog();
+                
+                //用法2
+
+                CustomDialog customDialog  = new CustomDialog(mContext);
+                customDialog.showDialog();
+                
             }
         });
     }
