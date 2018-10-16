@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ShoppingSelectNumView">
+        <!--editText是否可以编辑-->
+        <attr name="select_num_editable" format="boolean"/>
+        <!--数量字体大小-->
+        <attr name="select_num_content_size" format="dimension"/>
+        <!--数量字体颜色-->
+        <attr name="select_num_content_color" format="reference"/>
+        <!--减图片-->
+        <attr name="select_num_subtract_img" format="reference"/>
+        <!--加图片-->
+        <attr name="select_num_add_img" format="reference"/>
+        
+    </declare-styleable>
+    
+    <color name="select_num_default_color">#333333</color>
+    
+</resources>

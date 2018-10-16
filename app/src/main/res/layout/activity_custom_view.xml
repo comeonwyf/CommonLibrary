@@ -6,59 +6,78 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     
-    
-    <com.example.widgetlibrary.DifferentTextView
-        android:id="@+id/item_one"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/normal_20dp"
-        android:padding="@dimen/normal_20dp"
-        app:leftContent_size_different_view="@dimen/normal_20sp"
-        app:leftContent_color_different_view="@color/colorPrimary"
-        app:leftContent_marginRight_different_view="@dimen/normal_30dp"
-        app:middleContent_color_different_view="@color/colorAccent"
-        app:middleContent_size_different_view="@dimen/normal_30sp"
-        app:rightContent_show_bold_different_view="true"/>
-
-    <com.example.widgetlibrary.DifferentTextView
-        android:id="@+id/item_two"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/normal_40dp"
-        app:leftContent_size_different_view="@dimen/normal_20sp"
-        app:leftContent_color_different_view="@color/colorPrimary"
-        app:leftContent_marginRight_different_view="@dimen/normal_30dp"
-        app:leftContent_show_bold_different_view="true"
-        app:middleContent_color_different_view="@color/colorAccent"
-        app:middleContent_size_different_view="@dimen/normal_30sp"
-        app:rightContent_show_bold_different_view="true"
-        app:rightContent_marginLeft_different_view="@dimen/normal_50dp"
-        app:rightContent_size_different_view="@dimen/normal_36sp"/>
-    
-    <com.example.widgetlibrary.PayTypeView
-        android:id="@+id/item_pay"
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/normal_20dp"
-        android:background="@color/colorAccent"
-        app:label_paytype_view="@mipmap/ic_pay"
-        app:content_paytype_view="支付宝支付"
-        app:content_color_paytype_view="@color/colorPrimary"
-        app:content_size_paytype_view="@dimen/normal_36sp"
-        app:select_img_paytype_view="@mipmap/ic_yuan"
-        app:unselect_img_paytype_view="@mipmap/ic_yuanhuise"/>
-    
-    <Button
-        android:id="@+id/btn_dialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="弹出Dialog"/>
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.example.widgetlibrary.DifferentTextView
+                android:id="@+id/item_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/normal_20dp"
+                android:padding="@dimen/normal_20dp"
+                app:leftContent_size_different_view="@dimen/normal_20sp"
+                app:leftContent_color_different_view="@color/colorPrimary"
+                app:leftContent_marginRight_different_view="@dimen/normal_30dp"
+                app:middleContent_color_different_view="@color/colorAccent"
+                app:middleContent_size_different_view="@dimen/normal_30sp"
+                app:rightContent_show_bold_different_view="true"/>
 
-    <Button
-        android:id="@+id/btn_recyclerView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="to recyclerview"/>
+            <com.example.widgetlibrary.DifferentTextView
+                android:id="@+id/item_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_40dp"
+                app:leftContent_size_different_view="@dimen/normal_20sp"
+                app:leftContent_color_different_view="@color/colorPrimary"
+                app:leftContent_marginRight_different_view="@dimen/normal_30dp"
+                app:leftContent_show_bold_different_view="true"
+                app:middleContent_color_different_view="@color/colorAccent"
+                app:middleContent_size_different_view="@dimen/normal_30sp"
+                app:rightContent_show_bold_different_view="true"
+                app:rightContent_marginLeft_different_view="@dimen/normal_50dp"
+                app:rightContent_size_different_view="@dimen/normal_36sp"/>
+
+            <com.example.widgetlibrary.PayTypeView
+                android:id="@+id/item_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/normal_20dp"
+                android:background="@color/colorAccent"
+                app:label_paytype_view="@mipmap/ic_pay"
+                app:content_paytype_view="支付宝支付"
+                app:content_color_paytype_view="@color/colorPrimary"
+                app:content_size_paytype_view="@dimen/normal_36sp"
+                app:select_img_paytype_view="@mipmap/ic_yuan"
+                app:unselect_img_paytype_view="@mipmap/ic_yuanhuise"/>
+
+            <Button
+                android:id="@+id/btn_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="弹出Dialog"/>
+
+            <Button
+                android:id="@+id/btn_recyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="to recyclerview"/>
+            
+
+            <Button
+                android:id="@+id/btn_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="to Map"/>
+            
+            
+            
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
     
     <com.example.widgetlibrary.ColorSeekBar
         android:id="@+id/colorSeekBar"
@@ -71,5 +90,5 @@
         android:layout_margin="@dimen/normal_20dp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/normal_20dp" />
-    
+   
 </LinearLayout>

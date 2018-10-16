@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import com.example.administrator.mycommonlibrarydemo.R;
+import com.example.administrator.mycommonlibrarydemo.util.ThreeMapsUtil;
 import com.example.administrator.mycommonlibrarydemo.widget.CustomDialog;
 import com.example.widgetlibrary.ColorSeekBar;
 import com.example.widgetlibrary.DifferentTextView;
@@ -23,9 +24,10 @@ public class CustomViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_custom_view);
         mContext = this;
       
-        setDifferentTextView();
         
-        setPayTypeView();
+        setDifferentTextView();//不同字体的view
+        
+        setPayTypeView();//支付item
         
         setDialog();
         
@@ -33,6 +35,19 @@ public class CustomViewActivity extends AppCompatActivity {
         
         setColorSeekBar();
         
+        setMap();
+        
+        
+        
+    }
+
+    private void setMap() {
+        findViewById(R.id.btn_map).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new ThreeMapsUtil().toGaoDeMapByAddress(CustomViewActivity.this,"深圳市南山区科兴科学园");
+            }
+        });
     }
 
     private void setColorSeekBar() {

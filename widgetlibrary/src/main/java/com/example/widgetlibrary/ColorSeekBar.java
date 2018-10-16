@@ -164,6 +164,8 @@ public class ColorSeekBar extends View {
         paint.reset();
     }
     
+    
+    
     public boolean onTouchEvent(MotionEvent event) {
         if(!mCanMove){
             return true;

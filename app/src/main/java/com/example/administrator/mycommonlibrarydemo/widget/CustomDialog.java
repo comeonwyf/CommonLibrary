@@ -5,7 +5,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.view.Gravity;
 import com.example.administrator.mycommonlibrarydemo.R;
-import com.example.administrator.mycommonlibrarydemo.util.DialogUtil;
+import com.example.widgetlibrary.dialog.DialogUtil;
 
 /**
  * Created by wuyufeng    on  2018/7/26 0026.
@@ -27,7 +27,7 @@ public class CustomDialog extends Dialog {
         setContentView(R.layout.dialog_custom);
         
         //是否从底部动画弹出
-        getWindow().setWindowAnimations(R.style.dialogfrombottom);
+        //getWindow().setWindowAnimations(R.style.dialogfrombottom);
         
         
     }

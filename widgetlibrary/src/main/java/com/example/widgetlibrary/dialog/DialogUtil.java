@@ -1,4 +1,4 @@
-package com.example.administrator.mycommonlibrarydemo.util;
+package com.example.widgetlibrary.dialog;
 
 import android.app.Dialog;
 import android.support.annotation.IntDef;
