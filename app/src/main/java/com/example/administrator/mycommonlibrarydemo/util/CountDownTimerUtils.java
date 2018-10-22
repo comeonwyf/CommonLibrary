@@ -1,7 +1,6 @@
 package com.example.administrator.mycommonlibrarydemo.util;
 
 import android.os.CountDownTimer;
-import android.util.Log;
 
 /**
  * 倒计时工具类
@@ -96,7 +95,6 @@ public class CountDownTimerUtils {
         if (mCountDownTimer == null) {
             create();
         }
-        Log.e("print", "start: "+mCountDownTimer );
         mCountDownTimer.cancel();
         mCountDownTimer.start();
     }

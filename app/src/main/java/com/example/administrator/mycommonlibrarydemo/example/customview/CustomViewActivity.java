@@ -4,10 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import com.example.administrator.mycommonlibrarydemo.R;
+import com.example.administrator.mycommonlibrarydemo.util.HandlerUtil;
 import com.example.administrator.mycommonlibrarydemo.util.ThreeMapsUtil;
 import com.example.administrator.mycommonlibrarydemo.util.ToastUtil;
 import com.example.administrator.mycommonlibrarydemo.widget.CustomDialog;
@@ -15,11 +17,15 @@ import com.example.widgetlibrary.ColorSeekBar;
 import com.example.widgetlibrary.DifferentTextView;
 import com.example.widgetlibrary.MoneyEditText;
 import com.example.widgetlibrary.PayTypeView;
+import com.example.widgetlibrary.RotateTextView;
 import com.example.widgetlibrary.ShoppingSelectNumView;
 
-public class CustomViewActivity extends AppCompatActivity {
+public class CustomViewActivity extends AppCompatActivity
+    implements HandlerUtil.OnReceiveMessageListener {
 
     private Context mContext;
+    private RotateTextView mRotateTextView;
+    private HandlerUtil.HandlerHolder mHandlerHolder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +49,18 @@ public class CustomViewActivity extends AppCompatActivity {
         setMoneyEditText();
 
         setShoppingSelectNumView();
+
+        Log.e("print", "onCreate: " );
+        mRotateTextView = findViewById(R.id.rotateTextView);
+
+        mHandlerHolder = new HandlerUtil.HandlerHolder(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.e("print", "onResume: ");
+        mHandlerHolder.sendEmptyMessageDelayed(1,5000);
     }
 
     private void setShoppingSelectNumView() {
@@ -158,5 +176,10 @@ public class CustomViewActivity extends AppCompatActivity {
                }
            }
        });
+    }
+
+    @Override
+    public void handlerMessage(Message msg) {
+        mRotateTextView.setDegree(123);
     }
 }

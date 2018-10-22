@@ -90,7 +90,11 @@
                 app:select_num_content_size="@dimen/normal_40sp"
                 app:select_num_content_color="@color/color_333"/>
             
-            
+            <com.example.widgetlibrary.RotateTextView
+                android:id="@+id/rotateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dddddd" />
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
     
