@@ -13,7 +13,7 @@ Step 2. Add the dependency
 
 dependencies {
 
-     implementation 'com.github.comeonwyf:CommonLibrary:v1.0.2'	
+     implementation 'com.github.comeonwyf:CommonLibrary:v1.0.6'	
      
 }
 
@@ -32,5 +32,9 @@ dependencies {
     PayTypeView（通用选择支付方式（微信或支付宝）的控件）；
     RatingBar(星星评价控件)；
     RoundRectImageView(圆角的Imageview)；
-    ShoppingSelectNumView(购买商品选择数量的控件)
+    ShoppingSelectNumView(购买商品选择数量的控件)；
+    工具类：
+    防止按钮快速点击Util；
+    十六进制和十进制操作的util；
+    Handler弱引用的Util；
 
