@@ -1,1 +1,2 @@
-include ':app', ':serialportlibrary', ':httplibrary', ':recyclerviewlibrary',':widgetlibrary'
+include ':app', ':serialportlibrary', ':httplibrary', ':recyclerviewlibrary', ':widgetlibrary',
+    ':MinioLib'

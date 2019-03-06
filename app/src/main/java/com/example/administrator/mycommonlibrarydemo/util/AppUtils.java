@@ -8,7 +8,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
-import android.content.pm.SigningInfo;
+
 import android.os.Build;
 import android.os.Debug;
 import android.os.Looper;
@@ -17,7 +17,7 @@ import java.security.MessageDigest;
 import java.util.List;
 
 import static android.content.Context.ACTIVITY_SERVICE;
-import static android.content.pm.PackageManager.GET_SIGNING_CERTIFICATES;
+
 
 /**
  * @Created_time: 2018/3/9 10:14
@@ -73,27 +73,27 @@ public class AppUtils {
         return "";
     }
 
-    //获取当前apk版本
-    public static long getVersionCode(Context context){
-        return getVersionCode(context, context.getPackageName());
-    }
+    ////获取当前apk版本
+    //public static long getVersionCode(Context context){
+    //    return getVersionCode(context, context.getPackageName());
+    //}
 
-    /**
-     * 获取指定包名的apk版本号
-     */
-    public static long getVersionCode(Context cx, String packageName){
-        try {
-            PackageManager packageManager = cx.getPackageManager();
-            PackageInfo info = packageManager.getPackageInfo(packageName, 0);
-            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.P){
-                return info.getLongVersionCode();
-            }
-            return info.versionCode;
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
-        return -1;
-    }
+    ///**
+    // * 获取指定包名的apk版本号
+    // */
+    //public static long getVersionCode(Context cx, String packageName){
+    //    try {
+    //        PackageManager packageManager = cx.getPackageManager();
+    //        PackageInfo info = packageManager.getPackageInfo(packageName, 0);
+    //        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.P){
+    //            return info.getLongVersionCode();
+    //        }
+    //        return info.versionCode;
+    //    } catch (PackageManager.NameNotFoundException e) {
+    //        e.printStackTrace();
+    //    }
+    //    return -1;
+    //}
 
     /**
      * 获取当前应用包名
@@ -193,37 +193,37 @@ public class AppUtils {
         return Debug.isDebuggerConnected();
     }
 
-    /**
-     * 获取当前app的包名
-     * @param context
-     */
-    public static String getAppSign(Context context){
-        return getAppSign(context, context.getPackageName());
-    }
+    ///**
+    // * 获取当前app的包名
+    // * @param context
+    // */
+    //public static String getAppSign(Context context){
+    //    return getAppSign(context, context.getPackageName());
+    //}
 
-    /**
-     * 获取指定包名的apk签名
-     * @param context
-     * @param packageName
-     */
-    public static String getAppSign(Context context, String packageName) {
-        try {
-            PackageManager pm = context.getPackageManager();
-            Signature[] signs = null;
-            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.P){
-                PackageInfo info = pm.getPackageInfo(packageName, GET_SIGNING_CERTIFICATES);
-                SigningInfo signingInfo = info.signingInfo;
-                signs = signingInfo.getApkContentsSigners();
-            } else {
-                PackageInfo info = pm.getPackageInfo(packageName, PackageManager.GET_SIGNATURES);
-                signs = info.signatures;
-            }
-            return signatureMD5(signs);
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
-        return "";
-    }
+    ///**
+    // * 获取指定包名的apk签名
+    // * @param context
+    // * @param packageName
+    // */
+    //public static String getAppSign(Context context, String packageName) {
+    //    try {
+    //        PackageManager pm = context.getPackageManager();
+    //        Signature[] signs = null;
+    //        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.P){
+    //            PackageInfo info = pm.getPackageInfo(packageName, GET_SIGNING_CERTIFICATES);
+    //            SigningInfo signingInfo = info.signingInfo;
+    //            signs = signingInfo.getApkContentsSigners();
+    //        } else {
+    //            PackageInfo info = pm.getPackageInfo(packageName, PackageManager.GET_SIGNATURES);
+    //            signs = info.signatures;
+    //        }
+    //        return signatureMD5(signs);
+    //    } catch (PackageManager.NameNotFoundException e) {
+    //        e.printStackTrace();
+    //    }
+    //    return "";
+    //}
 
     /**
      * 返回MD5

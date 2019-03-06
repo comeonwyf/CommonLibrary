@@ -12,6 +12,10 @@ import com.example.administrator.mycommonlibrarydemo.example.customview.CustomVi
 import com.example.administrator.mycommonlibrarydemo.example.http_get_data.MainBean;
 import com.example.administrator.mycommonlibrarydemo.example.http_get_data.MainHttp;
 import com.example.administrator.mycommonlibrarydemo.example.http_get_data.TipsCallback;
+import com.example.administrator.mycommonlibrarydemo.pattern.observerpattern.Boy;
+import com.example.administrator.mycommonlibrarydemo.pattern.observerpattern.Girl;
+import com.example.administrator.mycommonlibrarydemo.pattern.observerpattern.ObserverManager;
+import com.example.administrator.mycommonlibrarydemo.pattern.observerpattern.Weather;
 import com.example.administrator.mycommonlibrarydemo.util.CountDownTimerUtils;
 
 public class MainActivity extends AppCompatActivity {
@@ -38,6 +42,14 @@ public class MainActivity extends AppCompatActivity {
         countDownTimerUtils = CountDownTimerUtils.getCountDownTimer();
         Log.e("print", "onCreate: "+ countDownTimerUtils);
         countDownTimerUtils.start();
+
+        Boy boy = new Boy();
+        Girl girl = new Girl();
+        ObserverManager.getInstance(getApplicationContext()).add(boy);
+        ObserverManager.getInstance(getApplicationContext()).add(girl);
+        Weather weather = new Weather();
+        weather.des = "123";
+        ObserverManager.getInstance(getApplicationContext()).notifyObserver(weather);
         
     }
 
