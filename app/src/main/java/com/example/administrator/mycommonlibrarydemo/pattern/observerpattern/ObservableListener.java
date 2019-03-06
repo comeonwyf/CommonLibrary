@@ -6,7 +6,7 @@ package com.example.administrator.mycommonlibrarydemo.pattern.observerpattern;
  */
 
 public interface ObservableListener<T> {
-    void add(ObserverListener<T> observerListener);
-    void remove(ObserverListener<T> observerListener);
+    ObserverManager<T> add(ObserverListener<T> observerListener);
+    ObserverManager<T> remove(ObserverListener<T> observerListener);
     void notifyObserver(T data);
 }

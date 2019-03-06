@@ -7,10 +7,10 @@ import android.util.Log;
  * 观察者实现类
  */
 
-public class Girl<T> implements ObserverListener<T> {
+public class Girl implements ObserverListener<Weather> {
 
     @Override
-    public void update(T data) {
-        Log.e("print", "Girl: "+data.toString() );
+    public void update(Weather data) {
+        Log.e("print", "update: "+data.des );
     }
 }

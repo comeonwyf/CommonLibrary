@@ -29,13 +29,15 @@ public class ObserverManager<T> implements ObservableListener<T>{
     }
 
     @Override
-    public void add(ObserverListener<T> observerListener) {
+    public ObserverManager<T> add(ObserverListener<T> observerListener) {
         list.add(observerListener);
+        return this;
     }
 
     @Override
-    public void remove(ObserverListener<T> observerListener) {
+    public ObserverManager<T> remove(ObserverListener<T> observerListener) {
         list.remove(observerListener);
+        return this;
     }
 
     @Override

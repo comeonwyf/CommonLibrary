@@ -14,6 +14,7 @@ import com.example.administrator.mycommonlibrarydemo.example.http_get_data.MainH
 import com.example.administrator.mycommonlibrarydemo.example.http_get_data.TipsCallback;
 import com.example.administrator.mycommonlibrarydemo.pattern.observerpattern.Boy;
 import com.example.administrator.mycommonlibrarydemo.pattern.observerpattern.Girl;
+import com.example.administrator.mycommonlibrarydemo.pattern.observerpattern.ObserverListener;
 import com.example.administrator.mycommonlibrarydemo.pattern.observerpattern.ObserverManager;
 import com.example.administrator.mycommonlibrarydemo.pattern.observerpattern.Weather;
 import com.example.administrator.mycommonlibrarydemo.util.CountDownTimerUtils;
@@ -45,8 +46,13 @@ public class MainActivity extends AppCompatActivity {
 
         Boy boy = new Boy();
         Girl girl = new Girl();
-        ObserverManager.getInstance(getApplicationContext()).add(boy);
-        ObserverManager.getInstance(getApplicationContext()).add(girl);
+        ObserverListener<Weather> weatherObserverListener = new ObserverListener<Weather>() {
+            @Override
+            public void update(Weather data) {
+                Log.e("print", "weatherObserverListener: "+data.des );
+            }
+        };
+        ObserverManager.getInstance(getApplicationContext()).add(boy).add(girl).add(weatherObserverListener);
         Weather weather = new Weather();
         weather.des = "123";
         ObserverManager.getInstance(getApplicationContext()).notifyObserver(weather);
