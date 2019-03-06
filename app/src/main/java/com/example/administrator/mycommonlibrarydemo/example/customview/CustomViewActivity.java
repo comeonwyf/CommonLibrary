@@ -10,7 +10,7 @@ import android.util.Log;
 import android.view.View;
 import com.example.administrator.mycommonlibrarydemo.R;
 import com.example.administrator.mycommonlibrarydemo.util.HandlerUtil;
-import com.example.administrator.mycommonlibrarydemo.util.ThreeMapsUtil;
+import com.example.administrator.mycommonlibrarydemo.util.ThirdMapsUtil;
 import com.example.administrator.mycommonlibrarydemo.util.ToastUtil;
 import com.example.administrator.mycommonlibrarydemo.widget.CustomDialog;
 import com.example.widgetlibrary.ColorSeekBar;
@@ -71,7 +71,27 @@ public class CustomViewActivity extends AppCompatActivity
             public void getCount(String count) {
                 ToastUtil.showToastShort(getApplicationContext(),count);
             }
+
+            @Override
+            public void overInventoryTip() {
+                
+            }
         });
+    }
+    private boolean detectCapitalUse(String word) {
+
+        String c = word.substring(0, 1);
+        if(c.matches("^[A-Z].*?")){
+            String substring = word.substring(1, word.length());
+            if(substring.equals(substring.toLowerCase())){
+                return true;
+            }else if(substring.equals(substring.toUpperCase())){
+                return true;
+            }
+        }else if(word.equals(word.toLowerCase())) {
+            return true;
+        }
+        return false;
     }
 
     private void setMoneyEditText() {
@@ -83,7 +103,7 @@ public class CustomViewActivity extends AppCompatActivity
         findViewById(R.id.btn_map).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new ThreeMapsUtil().toGaoDeMapByAddress(CustomViewActivity.this,"深圳市南山区科兴科学园");
+                new ThirdMapsUtil().toGaoDeMapByAddress(CustomViewActivity.this,"深圳市南山区科兴科学园");
             }
         });
     }

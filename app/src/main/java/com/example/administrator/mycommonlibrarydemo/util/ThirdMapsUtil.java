@@ -11,7 +11,7 @@ import android.net.Uri;
  * 调用第三方地图（高德或百度），如果都没有安装，就调用高德的网页地图
  */
 
-public class ThreeMapsUtil {
+public class ThirdMapsUtil {
     private static String GaoDePackageName = "com.autonavi.minimap";
     private static String BaiduPackageName = "com.baidu.BaiduMap";
 
@@ -57,7 +57,7 @@ public class ThreeMapsUtil {
                 ToastUtil.showToastShort(activity, "没有安装高德app,正打开网页版");
                 Intent intent = new Intent();
                 intent.setAction("android.intent.action.VIEW");
-                intent.setData(Uri.parse("http://uri.amap.com/navigation"));
+                intent.setData(Uri.parse("http://uri.amap.com/navigation?to="+ lng + "," + lat + "&mode=car&src=nyx_super"));
                 activity.startActivity(intent);
             }
         } catch (Exception e) {

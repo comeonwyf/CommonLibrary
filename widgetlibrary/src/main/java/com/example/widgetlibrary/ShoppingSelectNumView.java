@@ -14,7 +14,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 /**
  * Created by wuyufeng    on  2018/10/15 0015.
@@ -124,7 +123,9 @@ public class ShoppingSelectNumView extends LinearLayout {
                     mEtNum.setText(count+"");
                     if(mIsSetRepertoryCount){
                         if(mRepertoryCount<count){
-                            Toast.makeText(context,"购买数量不能超过库存数",Toast.LENGTH_SHORT).show();
+                            if(mListener!=null){
+                                mListener.overInventoryTip();
+                            }
                             mEtNum.setText(mRepertoryCount+"");
                         }
                     }
@@ -168,7 +169,9 @@ public class ShoppingSelectNumView extends LinearLayout {
                 
                 if(mIsSetRepertoryCount && !TextUtils.isEmpty(countStr)){
                     if(mRepertoryCount<Integer.valueOf(countStr)){
-                        Toast.makeText(context,"购买数量不能超过库存数",Toast.LENGTH_SHORT).show();
+                        if(mListener!=null){
+                            mListener.overInventoryTip();
+                        }
                         mEtNum.setText(mRepertoryCount+"");
                         mEtNum.setSelection(mEtNum.getText().toString().length());
                     }
@@ -208,9 +211,14 @@ public class ShoppingSelectNumView extends LinearLayout {
         String countStr = mEtNum.getText().toString().trim();
         return countStr;
     }
-    
+
+    /**
+     * 选择数量回调
+     * 当有设置库存的时候，超过库存数的时候回调
+     */
     public interface SelectCountListener{
         void getCount(String count);
+        void overInventoryTip();
     }
     
     public void setSelectCountListener(SelectCountListener l){

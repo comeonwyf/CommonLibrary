@@ -60,4 +60,10 @@ dependencies {
     implementation project(':serialportlibrary')
     implementation project(':httplibrary')
     implementation project(':recyclerviewlibrary')
+
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
+    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+
+    //蓝牙
+    implementation 'com.clj.fastble:FastBleLib:2.3.2'
 }
