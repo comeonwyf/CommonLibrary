@@ -4,6 +4,25 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- 华为角标 -->
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+
+    <!-- 三星角标 -->
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+
+    <!-- HTC角标 -->
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+
+    <!-- 联想角标 -->
+    <uses-permission android:name="android.permission.READ_APP_BADGE"/>
+
+    <!-- 索尼角标 -->
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"/>
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+    <uses-permission android:name="com.sonyericsson.home.action.UPDATE_BADGE"/>
+
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -15,14 +34,17 @@
         <activity
             android:name=".example.MainActivity"
             android:theme="@style/WelcomeTheme">
+           
+        </activity>
+        <activity android:name=".example.customview.CustomViewActivity" />
+        <activity android:name=".example.customview.RecyclerViewDemoActivity" />
+        <activity android:name=".rxjava.RXjave2DemoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".example.customview.CustomViewActivity" />
-        <activity android:name=".example.customview.RecyclerViewDemoActivity"></activity>
     </application>
 
 </manifest>
